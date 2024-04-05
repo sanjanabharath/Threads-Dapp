@@ -487,22 +487,31 @@ function likeTweet(_x4, _x5) {
 }
 function _likeTweet() {
   _likeTweet = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(author, id) {
+    var accounts;
     return _regeneratorRuntime().wrap(function _callee6$(_context6) {
       while (1) switch (_context6.prev = _context6.next) {
         case 0:
-          try {
-            // 8️⃣ call the likeTweet function from smart contract
-            // INPUT: author and id
-            // GOAL: Save the like in the smart contract
-            // HINT: don't forget to use await 😉 👇
-          } catch (error) {
-            console.error("User rejected request:", error);
-          }
-        case 1:
+          _context6.next = 2;
+          return web3.eth.getAccounts();
+        case 2:
+          accounts = _context6.sent;
+          _context6.prev = 3;
+          _context6.next = 6;
+          return contract.methods.likeTweet(author, id).send({
+            from: accounts[0]
+          });
+        case 6:
+          _context6.next = 11;
+          break;
+        case 8:
+          _context6.prev = 8;
+          _context6.t0 = _context6["catch"](3);
+          console.error("User rejected request:", _context6.t0);
+        case 11:
         case "end":
           return _context6.stop();
       }
-    }, _callee6);
+    }, _callee6, null, [[3, 8]]);
   }));
   return _likeTweet.apply(this, arguments);
 }

@@ -115,11 +115,13 @@ function shortAddress(address, startLength = 6, endLength = 4) {
 }
 
 async function likeTweet(author, id) {
+    const accounts = await web3.eth.getAccounts();
   try {
     // 8️⃣ call the likeTweet function from smart contract
     // INPUT: author and id
     // GOAL: Save the like in the smart contract
     // HINT: don't forget to use await 😉 👇
+    await contract.methods.likeTweet(author, id).send({from: accounts[0] })
   } catch (error) {
     console.error("User rejected request:", error);
   }

@@ -40,13 +40,13 @@ body {
   }
   
   h1 {
-    color: #1da1f2;
+    color: #000000;
     text-align: center;
     margin-bottom: 20px;
   }
   
   #connectWalletBtn {
-    background-color: #1da1f2;
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -79,7 +79,7 @@ body {
   }
   
   button[type="submit"] {
-    background-color: #1da1f2;
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -97,14 +97,14 @@ body {
   
   .author {
     font-weight: bold;
-    color: #1da1f2;
+    color: #000000;
   }
   
   .like-button {
     background: none;
     border: none;
     cursor: pointer;
-    color: #1da1f2; /* Twitter's brand color */
+    color: #000000; /* Twitter's brand color */
     font-size: 1.2em;
     transition: all 0.3s ease;
   }
